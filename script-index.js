@@ -14,3 +14,7 @@ function menuPress() {
         home.style.filter = '';
     }
 }
+
+function load(){
+    document.cookie = "load=true";
+}
