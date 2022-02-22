@@ -14,7 +14,3 @@ function menuPress() {
         home.style.filter = '';
     }
 }
-
-function dfdfd(){
-    
-}
