@@ -1,0 +1,344 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+
+:root {
+  --color-bg: #333;
+  --color-text: #f1f1f1;
+  --color-itemsbg: #2a2a2a;
+  --accent-color-1: #ce4141;
+  --font-family: 'Roboto', sans-serif;
+  --font-family2: 'Montserrat', sans-serif;
+}
+
+@media (prefers-reduced-motion: reduce){
+  *{
+    animation-duration: 0s !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    transition-delay: 0s !important; 
+    scroll-behavior: auto !important;
+  }
+}
+
+
+/* @media only screen and (min-width: 1200px) {
+  :root {
+    --font-size: 18px;
+  }
+  html{
+    font-size: var(--font-size); 
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  :root {
+    --font-size: 16px;
+  }
+  html{
+    font-size: var(--font-size);
+  }
+} */
+
+html {
+  font-family: var(--font-family);
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-bg);
+}
+
+.home-wrapper{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -100;
+}
+
+.sec2-wrapper{
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -100;
+}
+
+.title{
+  width: min-content;
+  height: min-content;
+  margin: 1rem auto;
+  background: var(--color-itemsbg);
+  border-radius: 15px;
+  font-family: var(--font-family2);
+  color: var(--color-text);
+  padding: 10px;
+  font-size: 3rem;
+}
+
+.about{
+  position: absolute;
+  margin: auto;
+  left: 0;
+  right: 0;
+  text-align: center;
+  padding: 10px;
+  font-size: 1.2rem;
+  border-radius: 15px;
+  color: var(--color-text);
+  background: var(--color-itemsbg);
+  width: max-content;
+  height: 11rem;
+  max-width: 20ch;
+  overflow: hidden;
+  text-align: center;
+}
+
+.about a{
+  text-decoration: unset;
+  color: var(--color-text);
+  background: #7a2b2b;
+  padding: 8px;
+  margin-top: 0px;
+  border-radius: 3px;
+  transition: background .3s;
+  overflow: hidden;
+}
+
+.about a:hover{
+  background: var(--accent-color-1);
+}
+
+.header *{
+  display: inline-block;
+}
+
+#menuButton {
+  position: fixed;
+  top: 0;
+  margin: 2rem 1.5rem;
+  background: #1d1d1d;
+  color: var(--color-text);
+  padding: 10px;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: background 0.3s;
+  z-index: 10;
+}
+
+#menuButton:hover{
+  background: var(--accent-color-1);
+}
+
+.menuline1{
+  width: 20px;
+  height: 2.5px;
+  border-radius: 3px;
+  transform: translateY(-4px);
+  background: white;
+  transition: all 0.5s ease-in-out;
+}
+
+.menuline1::before{
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 2.5px;
+  background: white;
+  border-radius: 3px;
+  transition: all .5s ease-in-out;
+}
+
+.menuline1::before{
+  transform: rotate(-90deg);
+}
+
+.menuline1.menuOpen{
+  transform: rotate(-45deg) translate(3px, -3px);
+}
+
+.menu{
+  position: fixed;
+  background: #272727;
+  box-shadow: 0 0 25px 0 black;
+  left: 0;
+  top: 1rem;
+  width: 0%;
+  border-radius: 25px;
+  height: calc(100% - 2rem);
+  overflow: hidden;
+  transition: .5s ease;
+}
+
+.menu.menuOpen {
+  position: fixed;
+  width: 20rem;
+  left: 0;
+  transition: .5s ease;
+}
+
+.menu ul { 
+  list-style: none;
+  display: grid;
+  align-items: center;
+}
+
+.menu *{
+  text-decoration: none;
+  color: unset;
+}
+
+.menu li{
+  width: min-content;
+  margin-top: 2rem;
+  margin-left: 30%;
+}
+
+.menu a{
+  background: #303030;
+  color: var(--color-text);
+  padding: 5px;
+  border-radius: 3px;
+  transition: background 0.3s;
+}
+
+.menu a:hover{
+  background: var(--accent-color-1);
+}
+
+.github{
+  margin-left: 0 !important;
+  padding-left: 30px;
+  align-items: center;
+  position: absolute;
+  bottom: 1rem;
+  left: 14.5rem;
+  background: #1d1d1d;
+  padding: 3px;
+  border-radius: 5px;
+  width: 35px;
+  height: 40px;
+}
+
+.github a{
+  background: none !important;
+  width: max-content !important;
+  height: max-content !important;
+  display: grid;
+}
+
+.github img{
+  width: 30px;
+  height: 30px;
+}
+
+.github:hover{
+  opacity: .5;
+}
+
+.twitter{
+  margin-left: 0 !important;
+  position: absolute;
+  bottom: 1rem;
+  background: #1d1d1d;
+  padding: 3px;
+  border-radius: 5px;
+  width: 35px;
+  height: 40px;
+  align-items: center;
+}
+
+.twitter a{
+  background: none !important;
+  width: max-content !important;
+  height: max-content !important;
+  display: grid;
+}
+
+.twitter img{
+  width: 35px;
+  height: 30px;
+}
+
+.twitter:hover{
+  opacity: .5;
+}
+
+.desc{
+  font-family: var(--font-family2);
+  color: var(--color-text);
+  text-align: center;
+  margin-top: 20rem;
+  font-size: 50px;
+  animation: fadein 2s;
+}
+
+@keyframes fadein{
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.arrow{
+  width: 23px;
+  height: 2.5px;
+  border-radius: 3px;
+  background: white;
+  position: absolute;
+  top: 95%;
+  left: 50%;
+  transform: translate(-50%) rotate(90deg);
+  transition: top 1s;
+}
+
+.arrow::before{
+  content: '';
+  position: absolute;
+  width: 12px;
+  height: 2.5px;
+  margin: -4px 12px;
+  background: white;
+  transform: rotate(45deg);
+}
+
+.arrow::after{
+  content: '';
+  position: absolute;
+  width: 12px;
+  height: 2.5px;
+  margin: 4px 12px;
+  background: white;
+  transform: rotate(-45deg);
+}
+
+.arrow a{
+  position: absolute;
+  padding: 15px;
+  padding-left: 30px;
+  bottom: -14px;
+  right: -3px;
+}
+
+.arrow:hover{
+  top: 97%;
+}
+
+.num1 img{
+  width: 25rem;
+  position: absolute;
+  margin: 3rem;
+  margin-left: 10rem;
+}
+
+.num1 p{
+  position: absolute;
+  color: var(--color-text);
+  font-size: 20px;
+  font-family: var(--font-family2);
+  text-align: center;
+  margin-top: 5rem;
+  left: 35rem;
+  max-height: 208px;
+  overflow: hidden;
+}
