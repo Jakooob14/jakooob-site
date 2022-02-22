@@ -14,18 +14,31 @@
             color: white;
             text-align: center;
         }
+        #link{
+            color: rgb(207, 207, 207);
+            background-color: rgb(80, 80, 80);
+            padding: 5px;
+            border-radius: 10px;
+        }
     </style>
     <script>
-        const url = window.location.pathname;
-        function test(){
-            console.log(url);
+        const path = window.location.pathname;
+
+        function load(){
+            if(path.includes("4")){
+                document.getElementById("type").innerHTML = "Did you mean to go to ";
+                document.getElementById("link").innerHTML = window.location.hostname + "/contact";
+                document.getElementById("link").href = "contact.html";
+            }
         }
     </script>
 </head>
-<body>
+<body onload="load();">
     <h1>404</h1>
     <h2>Page not found</h2>
     <p>Make sure that you've typed the URL correctly.</p>
-    <button onclick="test();">sdfgd</button>
+    <br>
+    <p id="type"></p>
+    <a id="link"></a>
 </body>
 </html>
