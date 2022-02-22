@@ -14,13 +14,3 @@ function menuPress() {
         home.style.filter = '';
     }
 }
-
-function styleUpdate() {
-    var headID = document.getElementsByTagName('head')[0];
-    var link = document.createElement('link');
-    link.type = 'text/css';
-    link.rel = 'stylesheet';
-
-    link.href = 'style-index.css';
-    headID.appendChild(link);
-};
