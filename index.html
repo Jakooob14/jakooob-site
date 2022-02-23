@@ -4,25 +4,32 @@
     <meta charset="utf-8">
     <link rel="icon" href="https://cdn.glitch.com/9954373f-e1dc-4416-a24c-1fbf21fcaf68%2Fcoin.ico?v=1632067263838" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta http-equiv="Cache-control" content="no-cache" />
     <title>Jakooob</title>
     <script>document.write('<script src="script-index.js?dev=' + Math.floor(Math.random() * 1000000000) + '"\><\/script>');</script>
     <script>document.write('<link rel="stylesheet" href="style-index.css?v=' + Math.floor(Math.random() * 1000000000) + '"\><\/>');</script>
   </head>
   <body>
+    <div class="custom-cursor"></div>
+
     <header>
     <div class="header">
         <li><div class="navItem" id="menuButton" onclick="menuPress();"><div id="menuLine" class="menuline1"></div></div></li>
     </div>
     </header>
     <div id="menu" class="menu">
-      <div class="menuOptions">
-        <ul>
+      <a onclick="settingsToggle();" id="settings" class="settings"><img src="images/cog.svg" alt=""></a>
+      <ul class="pages">
           <li class="menuOption1"><a href="#">Home</a></li>
           <li class="menuOption2"><a href="#">Contact</a></li>
+        </ul>
+        <ul class="links">
           <li class="github"><a href="https://github.com/Jakooob14" target="_BLANK"><img src="images/github.png"></a></li>
           <li class="twitter"><a href="https://twitter.com/Jakooob14f" target="_BLANK"><img src="images/twitter.png"></a></li>
         </ul>
+    </div>
+    <div id="settingsOverlay">
+      <div class="settingsPopup">
+        <a onclick="settingsToggle();" id="closeBtn"></a>
       </div>
     </div>
       <div id="home-wrapper" class="home-wrapper">
@@ -45,6 +52,7 @@
           <h1>About me</h1>
           <p>My name is Jakub Sokol, but you can call me Jakooob. I love gaming, game development and just about any other form of technology. Some of my favorite games are Minecraft and Subnautica.</p>
         </div>
+        <span id="spacer"></span>
         <div class="num2">
           <h1>Lorem 2</h1>
           <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere nisi laboriosam accusantium magnam accusamus placeat
