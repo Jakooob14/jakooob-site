@@ -4,28 +4,35 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script>document.write('<link rel="stylesheet" href="general.css?v=' + Math.floor(Math.random() * 1000000000) + '"\><\/>');</script>
     <title>404</title>
     <style>
         @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
 
         html{
             font-family: 'Roboto', sans-serif;
-            background-color: #333;
+            background-color: var(--color-bg);
             color: white;
             text-align: center;
         }
         #link{
-            color: rgb(207, 207, 207);
+            color: var(--color-text);
             background-color: rgb(80, 80, 80);
             padding: 5px;
-            border-radius: 10px;
+            border-radius: 5px;
+        }
+        #home{
+            color: var(--color-text);
+            text-decoration: none;
+            padding: 7px;
+            border-radius: 5px;
         }
     </style>
     <script>
         const path = window.location.pathname;
 
         function load(){
-            if(path.includes("4l")){
+            if(path.includes("4")){
                 document.getElementById("type").innerHTML = "Did you mean to go to ";
                 document.getElementById("link").innerHTML = window.location.hostname + "/contact";
                 document.getElementById("link").href = "contact.html";
@@ -43,5 +50,7 @@
     <br>
     <p id="type"></p>
     <a id="link"></a>
+    <br><br><br>
+    <a href="index.html" class="btn" id="home">Home</a>
 </body>
 </html>

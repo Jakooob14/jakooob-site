@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+
+
+@media (prefers-reduced-motion: reduce){
+  *{
+    animation-duration: 0s !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    transition-delay: 0s !important; 
+    scroll-behavior: auto !important;
+  }
+}
+
+:root {
+  --color-bg: #333;
+  --color-text: #f1f1f1;
+  --color-itemsbg: #2a2a2a;
+  --color-border: #222222;
+  --accent-color-1: #7a2b2b;
+  --font-family: 'Roboto', sans-serif;
+  --font-family2: 'Montserrat', sans-serif;
+  --cursor-size: 15px;
+  --cursor-thickness: 1px;
+}
+
+::selection{
+  background-color: rgb(65, 65, 65);
+}
+
+.btn{
+  background-color: var(--accent-color-1);
+  transition: filter .3s;
+}
+
+.btn:hover{
+  filter: brightness(1.2);
+}
