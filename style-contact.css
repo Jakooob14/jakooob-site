@@ -1,0 +1,40 @@
+html{
+  font-family: var(--font-family);
+  scroll-behavior: smooth;
+}
+
+body{
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    font-family: var(--font-family);
+}
+
+.title{
+  width: min-content;
+  height: min-content;
+  margin: 1rem auto;
+  background: var(--color-itemsbg);
+  border-radius: 15px;
+  font-family: var(--font-family2);
+  padding: 10px;
+  font-size: 3rem;
+}
+
+.contactCont{
+    position: absolute;
+    text-align: center;
+    left: 50%;
+    top: 20rem;
+    translate: -50%;
+    width: 90%;
+    font-size: 1.2rem;
+}
+
+.contactCont a{
+    color: var(--accent-color-1);
+    filter: brightness(1.7);
+}
+
+.contactCont a:hover{
+    filter: brightness(1.4);
+}
