@@ -25,8 +25,13 @@ body {
   background: var(--color-bg);
 }
 
+html, body{
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
 .home-wrapper{
-  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
@@ -36,7 +41,6 @@ body {
 }
 
 .sec2-wrapper{
-  position: absolute;
   top: 100%;
   left: 0;
   width: 100%;
@@ -52,7 +56,7 @@ body {
 .title{
   width: min-content;
   height: min-content;
-  margin: 1rem auto;
+  margin: 2rem auto;
   background: var(--color-itemsbg);
   border-radius: 15px;
   font-family: var(--font-family2);
@@ -76,47 +80,21 @@ body {
 }
 
 .arrow{
-  width: 23px;
-  height: 2.5px;
-  border-radius: 3px;
-  background: white;
   position: absolute;
-  top: 95%;
-  left: 50%;
-  transform: translate(-50%) rotate(90deg);
-  transition: top 1s;
+  bottom: 0;
+  width: 100%;
+  height: 50px;
+  text-align: center;
+  top: auto;
+}
+.arrow img{
+  width: 20px;
+  padding-top: 0;
+  transition: padding-top 1s;
 }
 
-.arrow::before{
-  content: '';
-  position: absolute;
-  width: 12px;
-  height: 2.5px;
-  margin: -4px 12px;
-  background: white;
-  transform: rotate(45deg);
-}
-
-.arrow::after{
-  content: '';
-  position: absolute;
-  width: 12px;
-  height: 2.5px;
-  margin: 4px 12px;
-  background: white;
-  transform: rotate(-45deg);
-}
-
-.arrow a{
-  position: absolute;
-  padding: 15px;
-  padding-left: 30px;
-  bottom: -14px;
-  right: -3px;
-}
-
-.arrow:hover{
-  top: 97%;
+.arrow img:hover{
+  padding-top: 15px;
 }
 
 .sec2-wrapper p{
@@ -144,4 +122,10 @@ body {
   background-color: var(--color-itemsbg);
   border-radius: 4px;
   margin-top: 5rem;
+}
+
+footer{
+  width: 100%;
+  height: 10px;
+  background-color: black;
 }

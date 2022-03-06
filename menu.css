@@ -6,6 +6,12 @@
   display: inline-block;
 }
 
+.header{
+  background-color: rgb(0, 0, 0);
+  height: 4rem;
+  width: 100%;
+}
+
 #menuButton {
   position: fixed;
   top: 0;
@@ -30,9 +36,9 @@
   width: 20px;
   height: 2.5px;
   border-radius: 3px;
-  transform: translateY(-4px);
   background: white;
   transition: all 0.5s ease-in-out;
+  transform: translateY(-4px);
 }
 
 .menuline1::before{
