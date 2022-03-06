@@ -56,7 +56,7 @@ html, body{
 .title{
   width: min-content;
   height: min-content;
-  margin: 2rem auto;
+  margin: 5rem auto;
   background: var(--color-itemsbg);
   border-radius: 15px;
   font-family: var(--font-family2);

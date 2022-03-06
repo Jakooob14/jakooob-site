@@ -2,127 +2,39 @@
     font-family: var(--font-family);
 }
 
-.header *{
-  display: inline-block;
+header *{
+  text-decoration: none;
+  color: unset;
 }
 
-.header{
-  background-color: rgb(0, 0, 0);
+header{
+  background-color: rgb(41, 41, 41);
   height: 4rem;
   width: 100%;
-}
-
-#menuButton {
-  position: fixed;
+  position: absolute;
   top: 0;
-  margin: 2rem 1.5rem;
-  background: #1d1d1d;
-  color: var(--color-text);
-  padding: 10px;
-  border-radius: 3px;
-  cursor: pointer;
-  transition: background 0.3s;
-  transition: opacity 0.3s;
-  z-index: 60;
-  opacity: .6;
-}
-
-#menuButton:hover{
-  background: var(--accent-color-1);
-  opacity: 1;
-}
-
-.menuline1{
-  width: 20px;
-  height: 2.5px;
-  border-radius: 3px;
-  background: white;
-  transition: all 0.5s ease-in-out;
-  transform: translateY(-4px);
-}
-
-.menuline1::before{
-  content: '';
-  position: absolute;
-  width: 20px;
-  height: 2.5px;
-  background: white;
-  border-radius: 3px;
-  transition: all .5s ease-in-out;
-}
-
-.menuline1::before{
-  transform: rotate(-90deg);
-}
-
-.menuline1.menuOpen{
-  transform: rotate(-45deg) translate(3px, -3px);
-}
-
-.menu{
-  position: fixed;
-  background: #272727;
-  box-shadow: 0 0 25px 0 black;
-  left: 0;
-  top: 1rem;
-  width: 0%;
-  border-radius: 25px;
-  border: 0;
-  height: calc(100% - 2rem);
-  overflow: hidden;
-  transition: .5s ease;
-  z-index: 50;
-}
-
-.menu.menuOpen {
-  border: 5px solid var(--color-border);
-  position: fixed;
-  width: 20rem;
-  left: 0;
-  transition: .5s ease;
-}
-
-.settings{
-  position: absolute;
-  cursor: pointer;
-  right: 1rem;
-  top: 1rem;
-  filter: invert(.25);
-  width: 25px;
-  transition: rotate .3s ease-in-out;
-}
-
-.settings:hover{
-  rotate: 30deg;
-}
-
-.settings::selection{
-  background-color: rgba(0, 0, 0, 0);
+  border-bottom: 6px solid rgb(30, 30, 30);
 }
 
 .pages {
   list-style: none;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  padding: 0;
-}
-
-.menu *{
-  text-decoration: none;
-  color: unset;
+  position: absolute;
+  height: inherit;
+  margin: 0;
 }
 
 .pages li{
-  margin-top: 2rem;
+  margin: 0 1rem;
 }
 
 .pages a{
-  background: #303030;
   color: var(--color-text);
   padding: 5px;
   border-radius: 3px;
-  transition: background 0.3s;
+  background-color: rgba(0, 0, 0, 0);
+  transition: background .2s;
 }
 
 .pages a:hover{
@@ -132,25 +44,24 @@
 .links{
   list-style: none;
   display: flex;
-  justify-content: space-around;
-  padding: 0;
+  align-items: center;
   position: absolute;
-  width: inherit;
-  bottom: 1rem;
+  height: inherit;
+  margin: 0;
+  right: 0;
+  padding-left: 0;
+  padding-right: 40px;
 }
 
 .links li{
-  background: #1d1d1d;
   padding: 6px;
   padding-bottom: 4px;
   border-radius: 5px;
-  width: min-content;
-  height: min-content;
-}
-
-.links a{
-  display: inline-block;
-  height: max-content;
+  width: fit-content;
+  height: fit-content;
+  cursor: pointer;
+  margin: 0 1rem;
+  transition: opacity .1s;
 }
 
 .links li:hover{
@@ -158,108 +69,10 @@
 }
 
 .github img{
-  width: 30px;
+  width: 25px;
+  margin-right: 1px;
 }
 
 .twitter img{
-  width: 35px;
-}
-
-#settingsOverlay {
-  position: fixed;
-  top: 0;
-  left: -100000cm;
-  opacity: 0;
-  height: 100%;
-  width: 100%;
-  background-color: rgba(0, 0, 0, .3);
-  z-index: 20;
-}
-
-.settingsPopup{
-  position: absolute;
-  background-color: var(--color-bg);
-  border-radius: 10px;
-  padding-right: 1.4rem;
-  left: 50%;
-  top: 50%;
-  width: 20rem;
-  translate: -50% -50%;
-  border: 5px solid var(--color-border);
-}
-
-#closeBtnDiv{
-  cursor: pointer;
-  width: 1rem;
-  height: 1rem;
-  position: absolute;
-  top: 10px;
-  right: 10px;
-}
-
-#closeBtn{
-  position: absolute;
-  width: 3px;
-  height: 21px;
-  border-radius: 3px;
-  background-color: white;
-  rotate: 45deg;
-  translate: 7px -2px;
-}
-
-#closeBtn::before{
-  content: '';
-  position: absolute;
-  width: 3px;
-  height: 21px;
-  border-radius: 3px;
-  background-color: white;
-  rotate: -90deg;
-}
-
-.allSettings{
-  display: flex;
-  height: inherit;
-  width: inherit;
-  padding: 1rem;
-  margin: 0;
-}
-
-.allSettings li{
-  list-style: none;
-  color: var(--color-text);
-}
-
-#color{
-  border: 2px dashed var(--color-border);
-  width: fit-content;
-  height: fit-content;
-  padding: .5rem 1rem;
-}
-
-#inputcolor{
-  padding: 0;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-#color h3{
-  color: var(--color-text);
-  font-weight: 400;
-}
-
-#inputcolor input{
-  padding: 0;
-  border: 0;
-  margin: 1rem;
-  width: 3rem;
-  height: 19px;
-}
-
-#inputcolor a{
-  text-decoration: unset;
-  color: var(--color-text);
-  padding: 2px 5px;
-  border-radius: 3px;
+  width: 30px;
 }

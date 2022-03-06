@@ -13,59 +13,15 @@
   <body onload="onload();">
 
     <header>
-    <div class="header">
-        
-    </div>
-    </header>
-    <div id="menu" class="menu">
-      <img id="settings" class="settings" onclick="settingsToggle();" src="images/cog.svg" alt="">
       <ul class="pages">
-          <li class="menuOption1"><a href="index.html">Home</a></li>
-          <li class="menuOption2"><a href="contact.html">Contact</a></li>
-        </ul>
-        <ul class="links">
-          <li class="github"><a href="https://github.com/Jakooob14" target="_BLANK"><img src="images/github.png"></a></li>
-          <li class="twitter"><a href="https://twitter.com/Jakooob14f" target="_BLANK"><img src="images/twitter.png"></a></li>
-        </ul>
-    </div>
-    <div id="settingsOverlay" onclick="settingsToggle();">
-      <div class="settingsPopup">
-        <div onclick="settingsToggle();" id="closeBtnDiv">
-          <a id="closeBtn"></a>
-        </div>
-        <ul class="allSettings">
-          <ul id="color">
-            <h3>Colors</h3>
-            <ul id="inputcolor">
-              <li><p>Background color</p></li>
-              <li><input oninput="bgColorChange(document.getElementById('bgColorVal').value);" id="bgColorVal" type="color"></li>
-              <li><a onclick="bgColorChange('#333'); document.getElementById('bgColorVal').value = '#333333';" class="btn">Reset</a></li>
-            </ul>
-            <ul id="inputcolor">
-              <li><p>Item color</p></li>
-              <li><input oninput="itemColorChange(document.getElementById('itemColorVal').value);" id="itemColorVal" type="color"></li>
-              <li><a onclick="itemColorChange('#2a2a2a'); document.getElementById('itemColorVal').value = '#2a2a2a';" class="btn">Reset</a>
-              </li>
-            </ul>
-            <ul id="inputcolor">
-              <li><p>Border color</p></li>
-              <li><input oninput="borderColorChange(document.getElementById('borderColorVal').value);" id="borderColorVal" type="color"></li>
-              <li><a onclick="borderColorChange('#222222'); document.getElementById('borderColorVal').value = '#222222';" class="btn">Reset</a></li>
-            </ul>
-              <ul id="inputcolor">
-                <li><p>Text color</p></li>
-                <li><input oninput="txtColorChange(document.getElementById('txtColorVal').value);" id="txtColorVal" type="color"></li>
-                <li><a onclick="txtColorChange('#f1f1f1'); document.getElementById('txtColorVal').value = '#f1f1f1';" class="btn">Reset</a></li>
-              </ul>
-              <ul id="inputcolor">
-                <li><p>Accent color</p></li>
-                <li><input oninput="accColorChange(document.getElementById('accColorVal').value);" id="accColorVal" type="color"></li>
-                <li><a onclick="accColorChange('#7a2b2b'); document.getElementById('accColorVal').value = '#7a2b2b';" class="btn">Reset</a></li>
-              </ul>
-          </ul>
-        </ul>
-      </div>
-    </div>
+        <li class="menuOption1"><a href="https://jakooob.ml">Home</a></li>
+        <li class="menuOption2"><a href="contact">Contact</a></li>
+      </ul>
+      <ul class="links">
+        <li class="github"><a href="https://github.com/Jakooob14" target="_BLANK"><img src="images/github.png"></a></li>
+        <li class="twitter"><a href="https://twitter.com/Jakooob14f" target="_BLANK"><img src="images/twitter.png"></a></li>
+      </ul>
+    </header>
       <div id="home-wrapper" class="home-wrapper">
         <div class="title">Jakooob</div>
         <h2 class="desc">A developer</h2>
