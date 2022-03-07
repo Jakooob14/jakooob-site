@@ -27,12 +27,12 @@ header{
 }
 
 .pages li{
-  margin: 0 1rem;
+  margin: 0 1vw;
 }
 
 .pages a{
   color: var(--color-text);
-  padding: 5px;
+  padding: 10px;
   border-radius: 3px;
   background-color: rgba(0, 0, 0, 0);
   transition: background .2s;
@@ -55,13 +55,13 @@ header{
 }
 
 .links li{
-  padding: 6px;
+  padding: 5px 10px;
   padding-bottom: 4px;
   border-radius: 5px;
   width: fit-content;
   height: fit-content;
   cursor: pointer;
-  margin: 0 1rem;
+  margin: 0 1vw;
   transition: opacity .1s;
 }
 
@@ -71,7 +71,6 @@ header{
 
 .github img{
   width: 25px;
-  margin-right: 1px;
 }
 
 .twitter img{

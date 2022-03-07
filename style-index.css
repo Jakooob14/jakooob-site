@@ -97,22 +97,20 @@ html, body{
   padding-top: 15px;
 }
 
-.sec2-wrapper p{
+.aboutme p{
   color: var(--color-text);
   font-family: var(--font-family2);
   text-align: center;
-  max-height: 200px;
-  overflow: hidden;
+  height: fit-content;
   font-size: 1.5rem;
   margin: 0 1rem;
 }
 
-.sec2-wrapper h1{
+.aboutme h1{
   color: var(--color-text);
   font-family: var(--font-family2);
   text-align: center;
   max-height: 200px;
-  overflow: hidden;
   font-size: 3.5rem;
 }
 
