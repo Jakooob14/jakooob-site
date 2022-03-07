@@ -29,29 +29,12 @@
             border-radius: 5px;
         }
     </style>
-    <script>
-        const path = window.location.pathname;
-
-        function load(){
-            if(path.includes("con")){
-                document.getElementById("type").innerHTML = "Did you mean to go to ";
-                document.getElementById("link").innerHTML = window.location.hostname + "/contact";
-                document.getElementById("link").href = "contact.html";
-            } else{
-                document.getElementById("type").remove();
-                document.getElementById("link").remove();
-            }
-        }
-    </script>
 </head>
 <body>
     <h1>404</h1>
     <h2>Page not found</h2>
     <p>Make sure that you've typed the URL correctly.</p>
     <br>
-    <p id="type"></p>
-    <a id="link"></a>
-    <br><br><br>
     <a href="index.html" class="btn" id="home">Home</a>
 </body>
 </html>
