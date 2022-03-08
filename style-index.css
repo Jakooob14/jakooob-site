@@ -6,7 +6,7 @@
     font-size: var(--font-size); 
   }
 }
-*/
+
 @media only screen and (max-width: 480px) {
   :root {
     --font-size: 69px;
@@ -14,7 +14,7 @@
   html{
     font-size: var(--font-size);
   }
-} 
+} */
 
 html {
   font-family: var(--font-family);
