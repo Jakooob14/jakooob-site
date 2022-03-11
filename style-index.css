@@ -7,9 +7,9 @@
   }
 }
 
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 600px) {
   :root {
-    --font-size: 69px;
+    --font-size: 16px;
   }
   html{
     font-size: var(--font-size);
@@ -23,6 +23,7 @@ html {
 
 body {
   background: var(--color-bg);
+  overflow-x: hidden;
 }
 
 html, body{
@@ -98,32 +99,61 @@ html, body{
 }
 
 .aboutme p{
-  color: var(--color-text);
   font-family: var(--font-family2);
   text-align: center;
-  height: fit-content;
   font-size: 1.5rem;
-  margin: 0 1rem;
 }
 
-.aboutme h1{
-  color: var(--color-text);
+.sec2-wrapper h1{
   font-family: var(--font-family2);
   text-align: center;
-  max-height: 200px;
   font-size: 3.5rem;
+  font-weight: 300;
 }
 
 #spacer{
   height: 5px;
   width: 80%;
   background-color: var(--color-itemsbg);
-  border-radius: 4px;
-  margin-top: 5rem;
+  border-radius: 5px;
 }
 
-footer{
+.stuff-invisible{
+  height: 15rem;
   width: 100%;
-  height: 10px;
-  background-color: black;
+  display: block;
+}
+
+.stuff{
+  width: 100%;
+}
+
+.stuff h1{
+  font-size: 2.5rem;
+}
+
+.stuff ul{
+  display: flex;
+  list-style: none;
+  padding: 0;
+  overflow: hidden;
+  position: absolute;
+  margin-top: -15rem;
+}
+#site-m{
+  width: 20rem;
+  height: 15rem;
+  background: linear-gradient(45deg, #711894, #16929b);
+}
+
+#site-x{
+  width: 20rem;
+  height: 15rem;
+  background: linear-gradient(45deg, #711894, #16929b);
+}
+
+#site-y{
+  width: 20rem;
+  height: 15rem;
+  background: linear-gradient(45deg, #711894, #16929b);
 }
