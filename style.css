@@ -1,20 +1,3 @@
- /*@media only screen and (min-width: 1200px) {
-  :root {
-    --font-size: 18px;
-  }
-  html{
-    font-size: var(--font-size); 
-  }
-}
-
-@media only screen and (max-width: 600px) {
-  :root {
-    --font-size: 16px;
-  }
-  html{
-    font-size: var(--font-size);
-  }
-} */
 
 html {
   font-family: var(--font-family);
@@ -67,12 +50,24 @@ html, body{
 }
 
 .desc{
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+  text-align: center;
+  height: calc(100vh + 5rem);
+  width: 100%;
+  position: absolute;
+  top: 0;
+}
+
+.desc h2{
   font-family: var(--font-family2);
   color: var(--color-text);
   text-align: center;
-  margin-top: 20rem;
   font-size: 50px;
   animation: fadein 2s;
+  line-height: 100%;
 }
 
 @keyframes fadein{
@@ -140,6 +135,43 @@ html, body{
   position: absolute;
   margin-top: -15rem;
 }
+
+.stuff li{
+  margin: 0 5rem;
+}
+
+.stuff-back{
+  position: absolute;
+  z-index: 1;
+  margin-top: 7rem;
+  left: 1rem;
+  padding: .5rem;
+  height: 24px;
+  background-color: var(--color-itemsbg);
+  border-radius: 24px;
+  cursor: pointer;
+}
+
+.stuff-forward{
+  position: absolute;
+  z-index: 1;
+  margin-top: 7rem;
+  right: 1rem;
+  padding: .5rem;
+  height: 24px;
+  background-color: var(--color-itemsbg);
+  border-radius: 24px;
+  cursor: pointer;
+}
+
+.stuff-forward img{
+  margin-left: 1px;
+}
+
+.stuff-back img{
+  margin-right: 1px;
+}
+
 #site-m{
   width: 20rem;
   height: 15rem;
@@ -149,11 +181,15 @@ html, body{
 #site-x{
   width: 20rem;
   height: 15rem;
-  background: linear-gradient(45deg, #711894, #16929b);
+  background: linear-gradient(45deg, #711894, #2c9b16);
 }
 
 #site-y{
   width: 20rem;
   height: 15rem;
-  background: linear-gradient(45deg, #711894, #16929b);
+  background: linear-gradient(45deg, #711894, #49169b);
+}
+
+.slides{
+  display: none;
 }

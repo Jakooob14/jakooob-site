@@ -29,6 +29,82 @@
     color: var(--color-text);
 }
 
+@media screen and (max-width: 600px) {
+  .pages{
+    display: none !important;
+  }
+
+  .menu{
+    display: block !important;
+  }
+
+  .links{
+    padding-right: 4vw !important;
+  }
+
+  .menuButton{
+    position: absolute;
+    padding: 1.5rem;
+    top: .6rem;
+    left: 1rem;
+  }
+  
+  .menuLine{
+    position: absolute;
+    display: block;
+    width: 2.5rem;
+    height: 4px;
+    background-color: rgb(238, 238, 238);
+    border-radius: 4px;
+    z-index: 10;
+    top: 30%;
+    left: 10%;
+    transition: transform 1s;
+  }
+
+  #menuLine2{
+    margin-top: 1rem;
+  }
+
+  #menuLine1.menuOpen{
+    transform: rotate(-45deg) translate(-11px);
+  }
+
+  #menuLine2.menuOpen{
+    transform: rotate(45deg) translate(-11px);
+  }
+
+  #menu-container{
+    position: fixed;
+    left: 0;
+    top: -100vh;
+    background-color: rgb(30, 30, 30);
+    width: 100%;
+    height: calc(100vh - (4rem + 6px));
+    z-index: -1;
+    transition: top 1s;
+  }
+
+  #menu-container ul{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+  }
+
+  #menu-container li{
+    margin: 1rem;
+    padding: .5rem;
+    background-color: var(--accent-color-2);
+    border-radius: 4px;
+  }
+} 
+
+.menu{
+  display: none;
+}
+
 ::selection{
   background-color: rgb(65, 65, 65);
 }
@@ -48,13 +124,19 @@ header *{
 }
 
 header{
-  background-color: rgb(41, 41, 41);
   height: 4rem;
   width: 100%;
   position: absolute;
   top: 0;
   left: 0;
+  z-index: 10;
+}
+
+.header{
+  height: inherit;
+  background-color: rgb(41, 41, 41);
   border-bottom: 6px solid rgb(30, 30, 30);
+  z-index: 10;
 }
 
 .pages {
@@ -91,6 +173,7 @@ header{
   height: inherit;
   margin: 0;
   right: 0;
+  margin-top: 3px;
   padding-left: 0;
   padding-right: 40px;
 }
@@ -104,6 +187,7 @@ header{
   cursor: pointer;
   margin: 0 1vw;
   transition: opacity .1s;
+  z-index: 10;
 }
 
 .links li:hover{

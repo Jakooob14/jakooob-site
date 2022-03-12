@@ -1,0 +1,168 @@
+@media screen and (max-width: 600px) {
+  .rpg-wrapper img {
+    width: 90% !important;
+  }
+
+  .jakooob-site img{
+    width: 40% !important;
+    margin-left: 1rem !important;
+  }
+}
+
+html {
+  font-family: var(--font-family);
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-bg);
+  overflow-x: hidden;
+}
+
+html, body{
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.home-wrapper{
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.rpg-wrapper{
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.leftNav{
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  height: fit-content;
+  width: fit-content;
+  z-index: 1;
+}
+
+.leftNav ul{
+  list-style: none;
+  padding: 0 1.5rem;
+}
+
+.leftNav li{
+  width: 1rem;
+  height: 1rem;
+  border-radius: 1rem;
+  border: 4px solid var(--accent-color-2);
+  margin: 2rem 0;
+  transition: background .25s;
+}
+
+.leftNav li:hover{
+  background: var(--accent-color-1);
+}
+
+.leftNav a{
+  padding-left: 1.7rem;
+  width: max-content;
+  display: block;
+  opacity: 0;
+  transition: opacity .25s;
+  cursor: default;
+  text-decoration: none;
+}
+
+.leftNav i{
+font-size: 9px;
+}
+
+.leftNav a:hover{
+  opacity: 1;
+}
+
+.title{
+  width: min-content;
+  height: min-content;
+  margin: 5rem auto;
+  background: var(--color-itemsbg);
+  border-radius: 15px;
+  font-family: var(--font-family2);
+  padding: 10px;
+  font-size: 3rem;
+}
+
+.jakooob-site{
+  margin-top: calc(4rem + 6px);
+  height: calc(100% - (4rem + 6px));
+  width: 100%;
+}
+
+.jakooob-site h1{
+  font-size: 40px;
+  animation: textin 3s;
+  position: absolute;
+  left: 50%;
+  translate: -50%;
+}
+
+@keyframes textin {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+.jtext1{
+  margin-top: 7rem;
+  font-size: 20px;
+  position: absolute;
+  left: 50%;
+  translate: -50%;
+  text-align: center;
+}
+
+.jakooob-site img{
+  width: 12rem;
+  margin-top: 12rem;
+  margin-left: calc(50% - 15rem);
+  position: absolute;
+}
+
+.jtext2{
+  font-size: 20px;
+  position: absolute;
+  left: 50%;
+  top: 20rem;
+}
+
+.jtext3{
+  font-size: 20px;
+  text-align: center;
+  position: absolute;
+  bottom: 10%;
+  width: 100%;
+}
+
+.rpg-wrapper{
+  display: flex;
+  flex-direction: column;
+}
+
+.rpg-wrapper h1{
+  font-size: 40px;
+  text-align: center;
+}
+
+.rpg-wrapper img{
+  width: 30rem;
+  margin: 3rem auto;
+}
+
+.rpg-wrapper p{
+  margin: 5rem auto;
+  font-size: 20px;
+  width: 70%;
+  text-align: center;
+}
