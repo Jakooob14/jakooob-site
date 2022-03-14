@@ -104,9 +104,8 @@ font-size: 9px;
 .jakooob-site h1{
   font-size: 40px;
   animation: textin 3s;
-  position: absolute;
-  left: 50%;
-  translate: -50%;
+  text-align: center;
+  margin-top: 5rem;
 }
 
 @keyframes textin {
@@ -117,15 +116,12 @@ font-size: 9px;
 .jtext1{
   margin-top: 7rem;
   font-size: 20px;
-  position: absolute;
-  left: 50%;
-  translate: -50%;
   text-align: center;
 }
 
 .jakooob-site img{
   width: 12rem;
-  margin-top: 12rem;
+  margin-top: 1rem;
   margin-left: calc(50% - 15rem);
   position: absolute;
 }
@@ -134,7 +130,7 @@ font-size: 9px;
   font-size: 20px;
   position: absolute;
   left: 50%;
-  top: 20rem;
+  top: 27rem;
 }
 
 .jtext3{
