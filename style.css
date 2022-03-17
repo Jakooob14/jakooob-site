@@ -64,10 +64,8 @@ html, body{
 .desc h2{
   font-family: var(--font-family2);
   color: var(--color-text);
-  text-align: center;
-  font-size: 50px;
+  font-size: 60px;
   animation: fadein 2s;
-  line-height: 100%;
 }
 
 @keyframes fadein{
@@ -112,4 +110,3 @@ html, body{
   background-color: var(--color-itemsbg);
   border-radius: 5px;
 }
-

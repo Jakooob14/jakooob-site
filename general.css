@@ -17,8 +17,8 @@
   --color-text: #f1f1f1;
   --color-itemsbg: #2a2a2a;
   --color-border: #222222;
-  --accent-color-1: #7a2b2b;
-  --accent-color-2: #6d2222;
+  --accent-color-1: #6d2222;
+  --accent-color-2: #7a2b2b;
   --font-family: 'Roboto', sans-serif;
   --font-family2: 'Montserrat', sans-serif;
 }
@@ -166,6 +166,7 @@ header{
 
 .pages a:hover{
   background: var(--accent-color-1);
+  box-shadow: 0 0 40px -10px red;
 }
 
 .links{

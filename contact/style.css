@@ -29,7 +29,7 @@ body{
 }
 
 .contactCont a{
-    color: var(--accent-color-1);
+    color: var(--accent-color-2);
     filter: brightness(1.7);
 }
 
