@@ -29,6 +29,10 @@
     color: var(--color-text);
 }
 
+*img{
+  image-rendering: -webkit-optimize-contrast;
+}
+
 @media screen and (max-width: 600px) {
   .pages{
     display: none !important;
