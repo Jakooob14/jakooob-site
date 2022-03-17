@@ -29,7 +29,7 @@
     color: var(--color-text);
 }
 
-*img{
+img{
   image-rendering: -webkit-optimize-contrast;
 }
 
