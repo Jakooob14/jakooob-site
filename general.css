@@ -162,7 +162,6 @@ header{
   background-color: rgba(0, 0, 0, 0);
   transition: background .2s;
   font-weight: 400;
-
 }
 
 .pages a:hover{
@@ -204,4 +203,8 @@ header{
 
 .twitter img{
   width: 30px;
+}
+
+.activetab a{
+  background-color: var(--accent-color-2);
 }
