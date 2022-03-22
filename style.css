@@ -13,20 +13,31 @@ html, body{
   height: 100%;
   margin: 0;
   padding: 0;
+  overflow: hidden;
+}
+
+.wrapper{
+  height: 100vh;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+}
+
+.wrapper section{
+  scroll-snap-align: start;
 }
 
 .home-wrapper{
-  top: 0;
-  left: 0;
   width: 100%;
   height: 100%;
   z-index: -100;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .sec2-wrapper{
-  top: 100%;
-  left: 0;
   width: 100%;
   height: 100%;
   z-index: -100;
@@ -38,6 +49,11 @@ html, body{
 }
 
 .title{
+  position: absolute;
+  width: 100%;
+}
+
+.title h1{
   width: min-content;
   height: min-content;
   margin: 5rem auto;
@@ -50,15 +66,7 @@ html, body{
 }
 
 .desc{
-  display: flex;
-  justify-content: center;
-  align-content: center;
-  flex-direction: column;
   text-align: center;
-  height: calc(100vh + 5rem);
-  width: 100%;
-  position: absolute;
-  top: 0;
 }
 
 .desc h2{
@@ -74,12 +82,11 @@ html, body{
 }
 
 .arrow{
-  position: absolute;
-  bottom: 0;
   width: 100%;
   height: 50px;
   text-align: center;
   top: auto;
+  margin-top: -50px;
 }
 .arrow img{
   width: 20px;

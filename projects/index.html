@@ -39,25 +39,27 @@
     </header>
     <div class="leftNav">
         <ul>
-            <li id="nav1"><a href="#home-wrapper">Jakooob.ml</a></li>
-            <li id="nav2"><a href="#rpg-wrapper">RPG <i>(Random Password Generator)</i></a></li>
+            <li id="nav1"><a href="#jakooob-site">Jakooob.ml</a></li>
+            <li id="nav2"><a href="#rpg">RPG <i>(Random Password Generator)</i></a></li>
         </ul>
     </div>
-    <div id="home-wrapper" class="home-wrapper">
-        <div class="jakooob-site">
+    <div class="sections-container">
+        <section id="jakooob-site" class="jakooob-site">
             <h1>Jakooob.ml</h1>
-            <p class="jtext1">This is my website that you're seeing right now. As you can see below, it is compatible with mobile!</p>
+            <p class="jtext1">This is my website that you're seeing right now. As you can see below, it is compatible with
+                mobile!</p>
             <div class="mobilepreviewdiv"><img src="/images/mobilepreview.png"></img></div>
-            <p class="jtext3">If you have any issues, you can contact me, or use the <a href="https://github.com/Jakooob14/jakooob-site/issues">issue tab</a> in the GitHub project.</p>
-        </div>
+            <p class="jtext3">If you have any issues, you can contact me, or use the <a
+                    href="https://github.com/Jakooob14/jakooob-site/issues">issue tab</a> in the GitHub project.</p>
+        </section>
+        <section id="rpg" class="rpg-wrapper">
+            <h1>Random Password Generator</h1>
+            <img src="/images/rpgpreview.png" alt="Random Password Generator Preview Image">
+            <p>This was my very first project made with Java. It is a very simple random password generator. You just put a
+                number in the characters input and click <i>Generate</i>, then you can copy the password to your clipboard by
+                clicking <i>Copy to clipboard</i>.</p>
+        </section>
     </div>
-    <span class="spacer"></span>
-    <div id="rpg-wrapper" class="rpg-wrapper">
-        <h1>Random Password Generator</h1>
-        <img src="/images/rpgpreview.png" alt="Random Password Generator Preview Image">
-        <p>This was my very first project made with Java. It is a very simple random password generator. You just put a number in the characters input and click <i>Generate</i>, then you can copy the password to your clipboard by clicking <i>Copy to clipboard</i>.</p>
-    </div>
-
     <script>document.write('<script src="/script.js?dev=' + Math.floor(Math.random() * 1000000000) + '"\><\/script>');</script>
 </body>
 
