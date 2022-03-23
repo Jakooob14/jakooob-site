@@ -109,10 +109,6 @@ img{
   display: none;
 }
 
-::selection{
-  background-color: rgb(65, 65, 65);
-}
-
 .btn{
   background-color: var(--accent-color-1);
   transition: filter .3s;
