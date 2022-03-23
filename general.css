@@ -156,13 +156,13 @@ header{
   padding: 10px;
   border-radius: 3px;
   background-color: rgba(0, 0, 0, 0);
-  transition: background .2s;
+  transition: background .2s, box-shadow .2s;
   font-weight: 400;
 }
 
 .pages a:hover{
   background: var(--accent-color-1);
-  box-shadow: 0 0 40px -10px red;
+  box-shadow: 0 0 30px 2px var(--accent-color-1);
 }
 
 .links{
