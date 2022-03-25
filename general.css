@@ -6,8 +6,7 @@
   *{
     animation-duration: 0s !important;
     animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    transition-delay: 0s !important; 
+    transition: none !important;
     scroll-behavior: auto !important;
   }
 }
@@ -17,6 +16,7 @@
   --color-text: #f1f1f1;
   --color-itemsbg: #2a2a2a;
   --color-border: #222222;
+  --color-header: #292929;
   --accent-color-1: #6d2222;
   --accent-color-2: #7a2b2b;
   --font-family: 'Roboto', sans-serif;
@@ -82,7 +82,7 @@ img{
     position: fixed;
     left: 0;
     top: -100vh;
-    background-color: rgb(30, 30, 30);
+    background-color: var(--color-border);
     width: 100%;
     height: calc(100vh - (4rem + 6px));
     z-index: -1;
@@ -134,8 +134,8 @@ header{
 
 .header{
   height: inherit;
-  background-color: rgb(41, 41, 41);
-  border-bottom: 6px solid rgb(30, 30, 30);
+  background-color: var(--color-header);
+  border-bottom: 6px solid var(--color-border);
   z-index: 10;
 }
 
@@ -194,6 +194,11 @@ header{
   opacity: .5;
 }
 
+.theme:hover{
+  opacity: 1 !important;
+}
+
+
 .github img{
   width: 25px;
 }
@@ -204,4 +209,29 @@ header{
 
 .activetab a{
   background-color: var(--accent-color-2);
+}
+
+.theme span{
+  width: 25px;
+  height: 25px;
+  border-radius: 25px;
+  background-color: #f1f1f1;
+  display: block;
+  margin-bottom: 3px;
+}
+
+.theme span::before{
+  content: '';
+  background-color: var(--color-header);
+  width: 26px;
+  height: 26px;
+  border-radius: 26px;
+  display: block;
+  margin-bottom: 8px;
+  margin-left: 26px;
+  transition: margin .2s;
+}
+
+.theme a:hover span::before{
+  margin-left: 5px;
 }
