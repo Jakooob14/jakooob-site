@@ -9,7 +9,7 @@
     <script>document.write('<link rel="stylesheet" href="/general.css?v=' + Math.floor(Math.random() * 1000000000) + '"\><\/>');</script>
     <script>document.write('<link rel="stylesheet" href="style.css?v=' + Math.floor(Math.random() * 1000000000) + '"\><\/>');</script>
 </head>
-<body>
+<body onload="themeCheck();">
 <header>
     <!--Header-->
     <div class="header">
@@ -19,7 +19,8 @@
             <li class="menuOption2 activetab"><a href="/projects">Projects</a></li>
         </ul>
       <ul class="links">
-        <li class="github"><a href="https://github.com/Jakooob14" target="_BLANK" title="GitHub"><img src="/images/github.png" alt="GitHub Logo"></a></li>
+        <li class="theme"><a onclick="themeChange();" title="Change theme"><span id="darktheme"></span><img src="/images/suncore.svg" id="lighttheme"><img id="sunrays" src="/images/sunrays.svg" alt=""></img></a></li>
+        <li id="github" class="github"><a href="https://github.com/Jakooob14" target="_BLANK" title="GitHub"><img src="/images/github.png" alt="GitHub Logo"></a></li>
         <li class="twitter"><a href="https://twitter.com/Jakooob14f" target="_BLANK" title="Twitter"><img src="/images/twitter.png" alt="Twitter Logo"></a></li>
       </ul>
     </div>
@@ -46,11 +47,8 @@
     <div class="sections-container">
         <section id="jakooob-site" class="jakooob-site">
             <h1>Jakooob.ml</h1>
-            <p class="jtext1">This is my website that you're seeing right now. As you can see below, it is compatible with
-                mobile!</p>
-            <div class="mobilepreviewdiv"><img src="/images/mobilepreview.png"></img></div>
-            <p class="jtext3">If you have any issues, you can contact me, or use the <a
-                    href="https://github.com/Jakooob14/jakooob-site/issues">issue tab</a> in the GitHub project.</p>
+            <p class="jtext1">This is my website that you're seeing right now. It is compatible with mobile! You can try it right now if you want to. <br>Btw i'm sorry if this page is kinda bland, but I don't know what more to add (‘～`).</p>
+            <p class="jtext2">If you have any issues or suggestions, you can contact me, or use the <a href="https://github.com/Jakooob14/jakooob-site/issues">issue tab</a> in the GitHub project.</p>
         </section>
         <section id="rpg" class="rpg-wrapper">
             <h1>Random Password Generator</h1>

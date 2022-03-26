@@ -45,17 +45,54 @@ function toggleMenu(){
     }
 }
 
-function themeChange(){  
+function themeCheck() {
     var theme = getCookie('theme');
     var root = document.documentElement.style;
-    if(theme == 'light'){
-        setCookie('theme', 'dark', 'session');
-        root.setProperty('--color-bg', '#fff');
-    } else if(theme == 'dark'){
-        setCookie('theme', 'light', 'session');
+    var darkTheme = document.getElementById('darktheme');
+    var lightTheme = document.getElementById('lighttheme');
+    var sunrays = document.getElementById('sunrays');
+    var github = document.getElementById('github');
+    if (theme == 'dark') {
         root.setProperty('--color-bg', '#333');
-    } else{
+        darkTheme.style.display = 'none';
+        lightTheme.style.display = 'block';
+        sunrays.style.display = 'block';
+        github.style.filter = 'invert(0)';
+        root.setProperty('--color-bg', '#333');
+        root.setProperty('--color-text', '#f1f1f1');
+        root.setProperty('--color-header', '#292929');
+        root.setProperty('--color-border', '#222');
+        root.setProperty('--accent-color-1', '#6d2222');
+        root.setProperty('--accent-color-2', '#7a2b2b');
+        root.setProperty('--color-itemsbg', '#2a2a2a');
+    } else if (theme == 'light') {
+        darkTheme.style.display = 'block';
+        lightTheme.style.display = 'none';
+        sunrays.style.display = 'none';
+        github.style.filter = 'invert(1)';
+        root.setProperty('--color-bg', '#fff');
+        root.setProperty('--color-text', '#333');
+        root.setProperty('--color-header', '#eee');
+        root.setProperty('--color-border', '#e5e5e5');
+        root.setProperty('--accent-color-1', '#c5eeee');
+        root.setProperty('--accent-color-2', '#aee');
+        root.setProperty('--color-itemsbg', '#e1e1e1');
+    } else {
+        setCookie('theme', 'dark', 'session');
+        themeCheck();
+    }
+}
+
+function themeChange() {
+    var theme = getCookie('theme');
+    if (theme == 'light') {
+        setCookie('theme', 'dark', 'session');
+        themeCheck();
+    } else if (theme == 'dark') {
         setCookie('theme', 'light', 'session');
-        themeChange();
+        themeCheck();
+    } else {
+        setCookie('theme', 'dark', 'session');
+        themeCheck();
     }
 }

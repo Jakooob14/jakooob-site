@@ -15,7 +15,7 @@
   --color-bg: #333;
   --color-text: #f1f1f1;
   --color-itemsbg: #2a2a2a;
-  --color-border: #222222;
+  --color-border: #222;
   --color-header: #292929;
   --accent-color-1: #6d2222;
   --accent-color-2: #7a2b2b;
@@ -58,7 +58,7 @@ img{
     display: block;
     width: 2.5rem;
     height: 4px;
-    background-color: rgb(238, 238, 238);
+    background-color: var(--color-text);
     border-radius: 4px;
     z-index: 10;
     top: 30%;
@@ -102,6 +102,15 @@ img{
     padding: .5rem;
     background-color: var(--accent-color-2);
     border-radius: 4px;
+  }
+
+  
+  #sunrays{
+   transform: scale(1) !important;
+  }
+  
+  #darktheme::before{
+    margin-left: 6px !important;
   }
 } 
 
@@ -211,27 +220,46 @@ header{
   background-color: var(--accent-color-2);
 }
 
-.theme span{
+#darktheme{
   width: 25px;
   height: 25px;
   border-radius: 25px;
   background-color: #f1f1f1;
   display: block;
   margin-bottom: 3px;
+  background-image: url(/images/moon.jpg);
+  background-size: 50px;
 }
 
-.theme span::before{
+#darktheme::before{
   content: '';
   background-color: var(--color-header);
   width: 26px;
   height: 26px;
   border-radius: 26px;
   display: block;
-  margin-bottom: 8px;
   margin-left: 26px;
-  transition: margin .2s;
+  will-change: margin;
+  transition: margin .4s cubic-bezier(0,0,.3,1);
 }
 
-.theme a:hover span::before{
-  margin-left: 5px;
+.theme a:hover #darktheme::before{
+  margin-left: 6px;
+}
+
+#lighttheme{
+  width: 26px;
+}
+
+#sunrays{
+  position: absolute;
+  width: 26px;
+  top: 19.5px;
+  transform: scale(.545);
+  will-change: transform;
+  transition: transform .4s cubic-bezier(0,0,.3,1);
+}
+
+#sunrays:hover{
+  transform: scale(1);
 }
