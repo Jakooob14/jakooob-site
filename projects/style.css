@@ -97,7 +97,7 @@ font-size: 9px;
   font-size: 3rem;
 }
 
-.jakooob-site{
+.coming-soon{
   height: 100vh;
   width: 100%;
   display: flex;
@@ -106,13 +106,13 @@ font-size: 9px;
   align-items: center;
 }
 
-.jakooob-site h1{
+.coming-soon h1{
   font-size: 40px;
   text-align: center;
   margin-top: 4rem;
 }
 
-.jakooob-site p{
+.coming-soon p{
   margin-top: 4rem;
   font-size: 20px;
   text-align: center;
