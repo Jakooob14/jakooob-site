@@ -5,7 +5,7 @@
     <link rel="icon" href="/images/favicon.svg?v=1" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <script>
-        const url = "http://shibe.online/api/shibes";
+        const url = "http://shibe.online/api/shibes?count=1&urls=true&httpsUrls=false";
         fetch(url)
             .then((response) => {
                 return response.json();
