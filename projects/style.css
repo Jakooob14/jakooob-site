@@ -3,6 +3,10 @@
     width: 90% !important;
   }
 
+  .rpg-wrapper p {
+    margin-top: 0 !important;
+  }
+
   .jakooob-site img{
     width: 30vw !important;
   }
@@ -142,6 +146,10 @@ font-size: 9px;
   font-size: 40px;
   text-align: center;
   padding-top: 7rem;
+}
+
+.rpg-wrapper h1 a{
+  text-decoration: none;
 }
 
 .rpg-wrapper img{
