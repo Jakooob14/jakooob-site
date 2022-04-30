@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <link rel="icon" href="/images/favicon.svg?v=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script>
+        const url = "http://shibe.online/api/shibes?count=1&urls=true&httpsUrls=false";
+        fetch(url)
+            .then((response) => {
+                return response.json();
+            })
+            .then((data) => {
+                document.getElementById('image').src = data.message;
+            })
+    </script>
+</head>
+<body>
+    <img src="" alt="" id="image">
+</body>
+</html>
